@@ -3,7 +3,6 @@
 from operator import itemgetter
 import sys
 
-average = 0
 sum = 0
 count = 0
 total_Sum = 0
@@ -26,5 +25,10 @@ for line in sys.stdin:
     total_Sum += sum
     total_count += count
 
-average = (total_Sum/total_count)
+# calculate the average
+if total_count > 0:
+    average = total_Sum / total_count
+else:
+    average = 0
+
 print('average = ' + str(average))
